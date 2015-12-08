@@ -85,3 +85,41 @@ var names = peeps.map(function (tweep){
 	return peeps.name;
 });
 alert(names.length);
+
+// another example
+var str = "friend with";
+
+for(var i =0; l= peeps.length; i < l; ++i){
+	str += peeps[i].name;
+	if(i< peeps.length-1) {str += ", "}
+}
+
+//we can transform this example in something more beautiful 
+var str = "friend with " + peeps.map(function(t){
+	return t.name;
+}).join(", ");
+
+// improve this example by adding new function that gives us value of a property by name
+function prop(name){
+	return function (object){
+		return  object[name];
+	}
+}
+
+// now our example looks like 
+var str = "friend with " + peeps.map(prop ("name")).join(", ");
+
+
+//Reduce is grandmother for for,foreach,while also known as fold
+//suppose we need to compute tola length of all names in our list
+var totalLength = 0;
+for(var i=0; i< buffers.length; i++){
+	totalLength += buffers[i].length;
+}
+//we cand use map to optain length of all names
+var totalLength = buffers.map(function (buffer) {return buffer.length; });
+
+// then we use reduce to sum all the lengths
+var totalLength = buffers.
+	map(function (buffer) {return buffer.length; }).
+	reduce(function(sum, curr){return sum+curr;}, 0);
