@@ -1,4 +1,5 @@
 var logger = (function (){
+    "use strict";
 
     var log = function (message) {
         console.log(message+ " [at " + getTimeStamp() + "]");

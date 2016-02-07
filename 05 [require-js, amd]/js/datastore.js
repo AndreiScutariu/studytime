@@ -1,4 +1,4 @@
-var dataStore = (function() {
+define("dataStore", [], function() {
     "use strict";
 
     var STORE_NAME = "datastore";
@@ -25,4 +25,4 @@ var dataStore = (function() {
         load: load,
         clear: clear
     };
-})();
+});
