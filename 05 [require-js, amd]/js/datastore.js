@@ -1,4 +1,4 @@
-define("dataStore", [], function() {
+define("dataStore", ["logger"], function(logger) {
     "use strict";
 
     var STORE_NAME = "datastore";
@@ -25,4 +25,5 @@ define("dataStore", [], function() {
         load: load,
         clear: clear
     };
+    
 });

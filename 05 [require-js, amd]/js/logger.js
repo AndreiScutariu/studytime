@@ -1,4 +1,4 @@
-var logger = (function (){
+define([], function() {
     "use strict";
 
     var log = function (message) {
@@ -15,5 +15,4 @@ var logger = (function (){
     return {
         log: log
     };
-
-})();
+});
