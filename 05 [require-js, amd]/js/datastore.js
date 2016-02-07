@@ -4,6 +4,7 @@ var dataStore = (function() {
     var STORE_NAME = "datastore";
 
     function save (info) {
+        logger.log(info.value + " saved.");
         localStorage.setItem(STORE_NAME, JSON.stringify((info)));
     }
 
